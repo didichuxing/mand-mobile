@@ -3,6 +3,14 @@ title: Change Log
 toc: hidden
 ---
 
+### 2.7.1
+
+`2024-04-125`
+
+- Feature
+    - `Icon`
+      - The 'size' attribute add the 'xxs' value
+
 ### 2.7.0
 
 `2024-03-12`

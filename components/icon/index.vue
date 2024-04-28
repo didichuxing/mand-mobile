@@ -70,8 +70,11 @@ export default {
     speak none
     -webkit-font-smoothing antialiased
     -moz-osx-font-smoothing grayscale
+    // xss 为兼容2.5.20版本及之前拼写错误
     &.xss
-      font-size icon-size-xss
+      font-size icon-size-xxs
+    &.xxs
+      font-size icon-size-xxs
     &.xs
       font-size icon-size-xs
     &.sm

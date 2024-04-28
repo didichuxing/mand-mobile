@@ -26,7 +26,7 @@ Custom svg icons and import local font file, please refer to <a href="javascript
 |Props | Description | Type | Default | Note |
 |----|-----|------|------|------|
 |name|icon name|String|-|-|
-|size|icon size|String|`md`|`xs`, `sm`, `md`, `lg`|
+|size|icon size|String|`md`|`xxs`<sup class="version-after">2.7.1+</sup>, `xs`, `sm`, `md`, `lg`|
 |color|icon color|String|`currentColor`|this color value is set as the value of `fill` on the `svg` icon|
 |svg|use svg icon|Boolean|`false` `true`<sup class="version-after">2.6.1+</sup>|Due to the inability to load web fonts in Apple [Lockdown Mode](https://support.apple.com/en-us/HT212650), the SVG icon is used by default since 2.6.1, and iconfont is used when set to `false`|
 

@@ -26,7 +26,7 @@ Vue.component(Icon.name, Icon)
 |属性 | 说明 | 类型 | 默认值| 备注|
 |----|-----|------|------|------|
 |name|图标名称|String|-|-|
-|size|图标大小|String|`md`|`xs`, `sm`, `md`, `lg`|
+|size|图标大小|String|`md`|`xxs`<sup class="version-after">2.7.1+</sup>, `xs`, `sm`, `md`, `lg`|
 |color|图标颜色|String|`currentColor`|-|
 |svg|使用svg图标|Boolean|`false` `true`<sup class="version-after">2.6.1+</sup>|因 Apple [锁定模式](https://support.apple.com/zh-cn/HT212650)中，无法加载网页字体，故2.6.1起默认使用 SVG 图标，设为 `false` 时使用 iconfont|
 
