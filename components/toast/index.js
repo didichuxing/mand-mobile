@@ -145,6 +145,26 @@ Toast.loading = (content = '', duration = 0, hasMask = true, parentNode = docume
   })
 }
 
+/**
+ * Show warning toast
+ * @param {string} content
+ * @param {number=} [duration=3000]
+ * @param {boolean=} [hasMask=true]
+ * @param {node=} [parentNode=document.body]
+ * @returns {Toast}
+ */
+
+Toast.warning = (content = '', duration = 3000, hasMask = false, parentNode = document.body, square = false) => {
+  return Toast({
+    icon: 'warn',
+    content,
+    duration,
+    hasMask,
+    parentNode,
+    square,
+  })
+}
+
 Toast.component = ToastOptions
 
 export default Toast

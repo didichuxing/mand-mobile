@@ -83,6 +83,18 @@ Dynamically create a loading toast
 ##### Toast.hide()
 Hide current toast
 
+
+##### Toast.warning(content, duration, hasMask, parentNode, square)
+Dynamically create a wraning toast
+
+| Props | Description | Type | Default | Note |
+|----|-----|------|------|------|
+| content | content of message| String/Number | - |- |
+| duration |toast will be closed in milliseconds; if set duration as`0`, the toast will always be visible | Number | `3000` | - |
+| hasMask | whether to show a transparent mask, which will prevent users from clicking | Boolean | `false` | - |
+| parentNode | portal node of toast | HTMLElement | `document.body`| - |
+| square <sup class="version-after">2.6.0+</sup> | use square style | Boolean | `false`|-|
+
 #### Toast Props
 <sup class="version-after">2.3.0+</sup>
 

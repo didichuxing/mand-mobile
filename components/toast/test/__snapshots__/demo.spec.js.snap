@@ -96,3 +96,16 @@ exports[`Toast - Demo Success 1`] = `
   </div>
 </div>
 `;
+
+exports[`Toast - Demo warning 1`] = `
+<div class="md-toast center">
+  <div class="md-popup center" style="">
+    <div class="md-popup-mask" style="display: none;"></div>
+    <div class="md-popup-box md-fade" style="">
+      <div class="md-toast-content"><i class="md-icon icon-font md-icon-warn warn lg"></i>
+        <div class="md-toast-text">操作警告</div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

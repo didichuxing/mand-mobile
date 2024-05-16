@@ -132,7 +132,7 @@ export default {
 
 .md-toast-content
   display inline-flex
-  align-items center
+  align-items flex-start
   max-width 100%
   min-width 80px
   padding toast-padding
@@ -148,6 +148,11 @@ export default {
     white-space nowrap
     text-overflow: ellipsis
     overflow hidden
+    word-break break-all
+    white-space normal
+    display -webkit-box
+    -webkit-box-orient vertical
+    -webkit-line-clamp 2
   &.square
     display flex
     flex-direction column
