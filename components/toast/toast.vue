@@ -145,9 +145,6 @@ export default {
   box-sizing border-box
   overflow hidden
   .md-toast-text
-    white-space nowrap
-    text-overflow: ellipsis
-    overflow hidden
     word-break break-all
     white-space normal
     display -webkit-box
@@ -156,6 +153,7 @@ export default {
   &.square
     display flex
     flex-direction column
+    align-items center
     width 240px
     min-height 232px
     padding 54px 36px 48px 36px
