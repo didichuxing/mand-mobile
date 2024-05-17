@@ -29,7 +29,7 @@ Dynamically create a toast
 |----|-----|------|------|------|
 | icon | name of icon | String | - | refer to `Icon` component for customized icons|
 | iconSvg | use svg icon | Boolean | `false` |-|
-| content | content of message| String/Number | - |- |
+| content | content of message| String/Number | - | content supports two lines display <sup class="version-after">2.7.1+</sup>  |
 | duration | toast will be closed in milliseconds; if set duration as`0`, the toast will always be visible | Number | `3000` | - |
 | position | display position | String | `center` | `top/center/bottom` |
 | hasMask | whether to show a transparent mask, which will prevent users from clicking| Boolean | `false` | - |
