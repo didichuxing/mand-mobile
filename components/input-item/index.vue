@@ -54,11 +54,11 @@
         }"
         @click="$_onFakeInputClick"
       >
-        <span v-text="inputValue"></span>
-        <span
+        <input class="md-input-item-input" :placeholder="inputPlaceholder" v-model="inputValue"/>
+        <!-- <span
           class="md-input-item-fake-placeholder"
           v-if="inputValue === '' && inputPlaceholder !== ''"
-          v-text="inputPlaceholder"></span>
+          v-text="inputPlaceholder"></span> -->
       </div>
     </template>
 
@@ -652,6 +652,20 @@ export default {
 .md-input-item-msg
   font-size input-item-font-size-error
   color input-item-color-error
+  animation-name errtips
+  animation-duration 0.5s
+
+@keyframes errtips {
+  10% {
+    transform translateX(4px)
+  }
+  60% {
+    transform translateX(-4px)
+  }
+  100% {
+    transform translateX(4)
+  }
+}
 
 .md-input-item
   &.left

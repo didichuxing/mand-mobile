@@ -37,7 +37,7 @@ Vue.component(InputItem.name, InputItem)
 |maxlength|表单最大字符数|String/Number|-|`phone`类型固定为11|
 |size|表单尺寸|String|`normal`|`large`,`normal`|
 |align|表单文本对齐方式|String|`left`|`left`,`center`,`right`|
-|error|表单错误提示信息|String|-|-|
+|error|表单错误提示信息|String|-|新增抖动动效<sup class="version-after">2.7.1+</sup>|
 |readonly|表单是否只读|Boolean|`false`|-|
 |disabled|表单是否禁用|Boolean|`false`|-|
 |is-title-latent|表单标题是否隐藏|Boolean|`false`|表单获得焦点或内容不为空时展示|
@@ -46,7 +46,7 @@ Vue.component(InputItem.name, InputItem)
 |is-amount|表单内容为金融数字|Boolean|`false`|-|
 |formation|表单文本格式化回调方法|Function(name, curValue, curPos): {value: curValue, range: curPos}|-|传入参数`name`为表单名称，`curValue`为表单值，`curPos`为表单光标当前所在位置<br/>返回参数`value`格式化值, `range`表单光标格式化后所在位置|
 |clearable|表单是否使用清除控件|Boolean|`false`|-|
-|is-virtual-keyboard|表单是否使用金融数字键盘控件|Boolean|`false`|-|
+|is-virtual-keyboard|表单是否使用金融数字键盘控件|Boolean|`false`|支持粘贴<sup class="version-after">2.7.1+</sup>|
 |virtual-keyboard-disorder|金融数字键盘数字键乱序|Boolean|`false`|-|
 |virtual-keyboard-ok-text|金融数字键盘确认键文案|String|`确定`|-|
 |virtual-keyboard-vm|金融数字键盘`ref`名称|String|-|一般用于自定义键盘|
