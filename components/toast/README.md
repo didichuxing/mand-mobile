@@ -31,7 +31,7 @@ Vue.component(Toast.component.name, Toast.component) // 组件引入
 |----|-----|------|------|------|
 | icon | Icon组件图标名称 | String | - |如需自定义图标, 请查看`Icon`组件 |
 | iconSvg | 使用svg图标 | Boolean | `false` |-|
-| content | 提示内容文本 | String | - |- |
+| content | 提示内容文本 | String | - |内容支持2行展示 <sup class="version-after">2.7.1+</sup>|
 | duration | 显示多少毫秒后自动消失, 若为`0`则一直显示 | Number | `3000` | - |
 | position | 展示位置 | String | `center` | `top/center/bottom` |
 | hasMask | 是否显示透明遮罩, 以此防止用户点击 | Boolean | `false` | - |
