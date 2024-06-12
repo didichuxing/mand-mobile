@@ -36,7 +36,7 @@ Vue.component(InputItem.name, InputItem)
 |maxlength|maximum number of characters that can be entered|String/Number|-|the maxlength of `phone` type is fixed at 11|
 |size|size of input|String|`normal`|`large`,`normal`|
 |align|text alignment|String|`left`|`left`,`center`,`right`|
-|error|error message|String|-|-|
+|error|error message|String|-|add shake animation <sup class="version-after">2.7.1+</sup>|
 |readonly|readonly|Boolean|`false`|-|
 |disabled|disabled|Boolean|`false`|-|
 |is-title-latent|hide title or not|Boolean|`false`|title will be displayed when input is focused or content is not empty|
@@ -45,7 +45,7 @@ Vue.component(InputItem.name, InputItem)
 |is-amount|the input is financial figures|Boolean|`false`|-|
 |formation|input text formatting callback function|Function(name, curValue, curPos): {value: curValue, range: curPos}|-|passing parameter `name` is the name of input, `curValue` is input value, `curPos` is the current position of input cursor, and returned `value` is formatted value. `range` is the position of input cursor after formatting|
 |clearable|use clear control or not|Boolean|`false`|-|
-|is-virtual-keyboard|use financial number keyboard control|Boolean|`false`|-|
+|is-virtual-keyboard|use financial number keyboard control|Boolean|`false`|support paste<sup class="version-after">2.7.1+</sup>|
 |virtual-keyboard-disorder|if number keys of financial number keyboard is out of order|Boolean|`false`|-|
 |virtual-keyboard-ok-text|confirmation key texts of financial number keyboard|String|`confirm`|-|
 |virtual-keyboard-vm|financial number keyboard ref name|String|-|generally used for custom number keyboard|
