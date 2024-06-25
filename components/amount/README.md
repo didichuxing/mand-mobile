@@ -33,4 +33,4 @@ Vue.component(Amount.name, Amount)
 |is-capital|数字是否转换为大写中文|Boolean|`false`|-|
 |transition|数字变化是否使用动画|Boolean|`false`|-|
 |duration|数字变化动画时长|Number|`1000`|单位`ms`|
-|mask<sup class="version-after">2.7.2+</sup> |是否掩码|Boolean|`false`|-|
+|mask<sup class="version-after">2.7.1+</sup> |是否掩码|Boolean|`false`|-|

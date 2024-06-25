@@ -14,7 +14,7 @@
 export default {
   name: 'amount-demo',
   /* DELETE */
-  title: '大写中文',
+  title: '掩码展示',
   titleEnUS: 'Capital Chinese',
   /* DELETE */
   components: {

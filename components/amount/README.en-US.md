@@ -33,4 +33,4 @@ The font `DIDIFD-Medium` is used in the component for the case show only, if nec
 |is-capital|convert to chinese capital|Boolean|`false`|-|
 |transition|use transition when value changes|Boolean|`false`|-|
 |duration|transition duration|Number|`1000`|unit `ms`|
-|mask<sup class="version-after">2.7.2+</sup>|use mask|Boolean|`false`|-|
+|mask<sup class="version-after">2.7.1+</sup>|use mask|Boolean|`false`|-|
