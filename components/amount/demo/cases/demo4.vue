@@ -15,7 +15,7 @@ export default {
   name: 'amount-demo',
   /* DELETE */
   title: '掩码展示',
-  titleEnUS: 'Capital Chinese',
+  titleEnUS: 'Mask Display',
   /* DELETE */
   components: {
     [Amount.name]: Amount,
