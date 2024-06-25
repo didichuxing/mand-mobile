@@ -1,6 +1,6 @@
 <template>
   <span class="md-amount" :class="{numerical: !isCapital}">
-    <template v-if="!isCapital">{{ formatValue | doPrecision(legalPrecision, isRoundUp) | doFormat(hasSeparator, separator) }}</template> <template v-else> {{ formatValue | doPrecision(4, isRoundUp) | doCapital }} </template>
+    <template v-if="!isCapital">{{ formatValue | doPrecision(legalPrecision, isRoundUp) | doFormat(hasSeparator, separator) | doMask(mask)}}</template> <template v-else> {{ formatValue | doPrecision(4, isRoundUp) | doCapital }} </template>
   </span>
 </template>
 
@@ -17,6 +17,13 @@ export default {
       const exponentialForm = Number(`${value}e${precision}`)
       const rounded = isRoundUp ? Math.round(exponentialForm) : Math.floor(exponentialForm)
       return Number(`${rounded}e-${precision}`).toFixed(precision)
+    },
+    doMask(value, mask) {
+      if (mask) {
+        return value.toString().replace(/\d/g, '*')
+      } else {
+        return value
+      }
     },
     doFormat(value, hasSeparator, separator) {
       if (!hasSeparator) {
@@ -77,6 +84,10 @@ export default {
     duration: {
       type: Number,
       default: 1000,
+    },
+    mask: {
+      type: Boolean,
+      default: false,
     },
   },
 
