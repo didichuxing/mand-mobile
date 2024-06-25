@@ -5,12 +5,17 @@ toc: hidden
 
 ### 2.7.1
 
-`2024-04-125`
+`2024-06-11`
 
 - Feature
     - `Icon`
       - `size` 属性增加 `xxs` 值
-
+    - `Toast`
+      - 内容由展示1行改为最多展示2行
+    - `InputItem`
+      - `is-virtual-keyboard` 属性为 `true` 时，支持粘贴内容到输入框
+    - `Amount`
+      - 新增 `mask` 属性，为 `true` 时将对数值进行掩码展示
 ### 2.7.0
 
 `2024-03-12`
