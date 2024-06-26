@@ -4,7 +4,8 @@
   </div>
 </template>
 
-<script>import {Toast, Button} from 'mand-mobile'
+<script>
+import {Toast, Button} from 'mand-mobile'
 
 export default {
   name: 'toast-demo',
@@ -17,8 +18,9 @@ export default {
   },
   methods: {
     showTextToast() {
-      Toast.info('一段文字')
+      Toast.info('申请成功，结清证明将于3个工作日后发送到您的接收邮箱刘龙')
     },
   },
 }
-</script>
+
+</script>
