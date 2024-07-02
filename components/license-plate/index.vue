@@ -47,7 +47,7 @@
               @keyMapping="keyMapping"
             />
           </div>
-          <slot name="button"></slot>
+          <slot name="content"></slot>
           <div class="md-license-plate-keyboard-container popUp">
             <md-license-plate-keyboard
               :keyboard="dyKeyboard"
@@ -62,8 +62,7 @@
   </div>
 </template>
 
-<script>
-import LicensePlateKeyboard from '../license-plate-keyboard'
+<script>import LicensePlateKeyboard from '../license-plate-keyboard'
 import LicensePlateInput from '../license-plate-input'
 import Popup from '../popup'
 import PopupTitlebar from '../popup/title-bar'
@@ -493,8 +492,7 @@ export default {
     },
   },
 }
-
-</script>
+</script>
 
 
 <style lang="stylus">
