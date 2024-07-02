@@ -430,7 +430,9 @@ export default {
       // 当前键位是第一个键位，隐藏分离键盘
       if (this.selectedIndex <= 0) {
         if (this.modeShow === 'division') {
-          this.hideDivisionKeyboard()
+          setTimeout(() => {
+            this.hideDivisionKeyboard()
+          }, 200)
         }
       } else {
         this.selectedIndex = this.selectedIndex - 1
@@ -440,7 +442,9 @@ export default {
     // 键盘确认事件
     $_onConfirm() {
       if (this.modeShow === 'division') {
-        this.hideDivisionKeyboard()
+        setTimeout(() => {
+          this.hideDivisionKeyboard()
+        }, 200)
       }
       this.$emit('confirm', this.keyArrayCopy.join(''))
     },
