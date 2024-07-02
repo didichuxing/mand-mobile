@@ -13,11 +13,25 @@
       :showPopUp="showPopUp"
       @hide="hide"
       @confirm="confirm"
-    ></md-license-plate>
+      @onEnter="onEnter"
+      @onDelete="onDelete"
+    >
+    <template v-slot:content>
+      <md-button
+        class="go-to-quote"
+        :disabled="buttonDisabled"
+        :class="[buttonDisabled ? 'buttonDisabled' : '']"
+        type="primary"
+      >
+        查看报价
+      </md-button>
+    </template>
+    </md-license-plate>
   </div>
 </template>
 
-<script>import {LicensePlate, DetailItem, Field} from 'mand-mobile'
+<script>
+import {LicensePlate, DetailItem, Field, Button} from 'mand-mobile'
 
 export default {
   name: 'license-plate-demo',
@@ -26,11 +40,13 @@ export default {
     [LicensePlate.name]: LicensePlate,
     [DetailItem.name]: DetailItem,
     [Field.name]: Field,
+    [Button.name]: Button,
   },
   data() {
     return {
       showPopUp: false,
       licensePlate: '',
+      buttonDisabled: false,
     }
   },
   methods: {
@@ -44,6 +60,40 @@ export default {
       this.hide()
       this.licensePlate = value
     },
+    onEnter(value) {
+      this.licensePlate = value
+    },
+    onDelete(value) {
+      this.licensePlate = value
+    },
   },
 }
-</script>
+
+</script>
+
+
+<style lang="stylus" scoped>
+.md-button {
+  width: 670px;
+  height: 100px;
+  border-radius: 50px;
+  background: #198CFF;
+  border 0
+  margin 0 auto
+  margin-bottom 40px
+}
+.md-button.block {
+  width: 670px;
+}
+.md-button.primary:after {
+  border 0
+}
+>>>.md-license-plate-input .md-license-plate-input-item {
+  width 72px
+}
+.buttonDisabled
+  >>>.primary
+    box-shadow none
+    opacity: 1;
+    background: rgba(25, 140, 255, 0.3);
+</style>

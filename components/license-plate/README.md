@@ -36,3 +36,6 @@ Vue.component(LicensePlate.name, LicensePlate)
 
 ##### @confirm()
 键盘确认事件
+
+#### content
+slot of content

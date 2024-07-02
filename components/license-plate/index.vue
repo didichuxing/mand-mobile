@@ -1,5 +1,5 @@
 <template>
-  <div class="md-license-plate">
+  <div class="md-license-plate" @click.stop>
     <div v-if="modeShow === 'division'">
       <div
         class="md-license-plate-input-container division"
@@ -47,6 +47,7 @@
               @keyMapping="keyMapping"
             />
           </div>
+          <slot name="button"></slot>
           <div class="md-license-plate-keyboard-container popUp">
             <md-license-plate-keyboard
               :keyboard="dyKeyboard"
@@ -61,7 +62,8 @@
   </div>
 </template>
 
-<script>import LicensePlateKeyboard from '../license-plate-keyboard'
+<script>
+import LicensePlateKeyboard from '../license-plate-keyboard'
 import LicensePlateInput from '../license-plate-input'
 import Popup from '../popup'
 import PopupTitlebar from '../popup/title-bar'
@@ -418,6 +420,7 @@ export default {
       } else {
         this.selectedIndex = this.selectedIndex + 1
       }
+      this.$emit('onEnter', this.keyArrayCopy.join(''))
     },
     // 删除事件
     $_onDelete() {
@@ -432,6 +435,7 @@ export default {
       } else {
         this.selectedIndex = this.selectedIndex - 1
       }
+      this.$emit('onDelete', this.keyArrayCopy.join(''))
     },
     // 键盘确认事件
     $_onConfirm() {
@@ -485,7 +489,8 @@ export default {
     },
   },
 }
-</script>
+
+</script>
 
 
 <style lang="stylus">
