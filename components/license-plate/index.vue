@@ -47,6 +47,7 @@
               @keyMapping="keyMapping"
             />
           </div>
+          <slot name="content"></slot>
           <div class="md-license-plate-keyboard-container popUp">
             <md-license-plate-keyboard
               :keyboard="dyKeyboard"
@@ -418,6 +419,7 @@ export default {
       } else {
         this.selectedIndex = this.selectedIndex + 1
       }
+      this.$emit('onEnter', this.keyArrayCopy.join(''))
     },
     // 删除事件
     $_onDelete() {
@@ -427,16 +429,23 @@ export default {
       // 当前键位是第一个键位，隐藏分离键盘
       if (this.selectedIndex <= 0) {
         if (this.modeShow === 'division') {
-          this.hideDivisionKeyboard()
+          const timeId = setTimeout(() => {
+            this.hideDivisionKeyboard()
+            clearTimeout(timeId)
+          }, 200)
         }
       } else {
         this.selectedIndex = this.selectedIndex - 1
       }
+      this.$emit('onDelete', this.keyArrayCopy.join(''))
     },
     // 键盘确认事件
     $_onConfirm() {
       if (this.modeShow === 'division') {
-        this.hideDivisionKeyboard()
+        const timeId = setTimeout(() => {
+          this.hideDivisionKeyboard()
+          clearTimeout(timeId)
+        }, 200)
       }
       this.$emit('confirm', this.keyArrayCopy.join(''))
     },
