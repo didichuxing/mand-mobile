@@ -16,6 +16,14 @@
       @onEnter="onEnter"
       @onDelete="onDelete"
     >
+    <template v-slot:content>
+      <md-button
+        class="go-to-quote"
+        type="primary"
+      >
+        按钮
+      </md-button>
+    </template>
     </md-license-plate>
   </div>
 </template>
@@ -24,7 +32,7 @@
 
 export default {
   name: 'license-plate-demo',
-  title: '半弹层版',
+  title: '自定义键盘弹窗内容插槽半弹层版',
   components: {
     [LicensePlate.name]: LicensePlate,
     [DetailItem.name]: DetailItem,
@@ -57,3 +65,25 @@ export default {
   },
 }
 </script>
+
+
+<style lang="stylus" scoped>
+.md-button {
+  width: 670px;
+  height: 100px;
+  border-radius: 50px;
+  background: #198CFF;
+  border 0
+  margin 0 auto
+  margin-bottom 40px
+}
+.md-button.block {
+  width: 670px;
+}
+.md-button.primary:after {
+  border 0
+}
+>>>.md-license-plate-input .md-license-plate-input-item {
+  width 72px
+}
+</style>

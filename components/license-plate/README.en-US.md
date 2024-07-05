@@ -36,3 +36,6 @@ hide Pop
 
 ##### @confirm()
 confirm
+
+#### content
+slot of content
