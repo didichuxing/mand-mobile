@@ -54,11 +54,11 @@
         }"
         @click="$_onFakeInputClick"
       >
-        <input class="md-input-item-input" :placeholder="inputPlaceholder" v-model="inputValue"/>
-        <!-- <span
+        <span v-text="inputValue"></span>
+        <span
           class="md-input-item-fake-placeholder"
           v-if="inputValue === '' && inputPlaceholder !== ''"
-          v-text="inputPlaceholder"></span> -->
+          v-text="inputPlaceholder"></span>
       </div>
     </template>
 
@@ -114,7 +114,8 @@
   </md-field-item>
 </template>
 
-<script>import Icon from '../icon'
+<script>
+import Icon from '../icon'
 import FieldItem from '../field-item'
 import NumberKeyboard from '../number-keyboard'
 import {getCursorsPosition, setCursorsPosition} from './cursor'
@@ -569,7 +570,8 @@ export default {
     },
   },
 }
-</script>
+
+</script>
 
 <style lang="stylus">
 .md-input-item
